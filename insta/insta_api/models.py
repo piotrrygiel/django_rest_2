@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import Q
 
 
 class Photo(models.Model):
@@ -29,8 +28,8 @@ class Like(models.Model):
 
 
 class Follow(models.Model):
-    follower_id = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name="+")
-    following_id = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True, related_name="+")
+    pass
+
 
 class User(models.Model):
     pass
