@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-=dzqf4_n2eqy1hm@9l%u5v*l=vzz7=-1_zxxzf5(c61y3*122k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Instarestapi-env.eba-gpmn2cwy.eu-central-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -77,9 +78,13 @@ WSGI_APPLICATION = 'insta.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': os.environ['RDS_DB_NAME'],
+    'USER': os.environ['RDS_USERNAME'],
+    'PASSWORD': os.environ['RDS_PASSWORD'],
+    'HOST': os.environ['RDS_HOSTNAME'],
+    'PORT': os.environ['RDS_PORT'],
     }
 }
 
