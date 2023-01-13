@@ -1,15 +1,15 @@
 name: CI-CD pipeline to AWS
 env:
-  EB_S3_BUCKET_NAME: "django-cicd-bucket-pr"
-  EB_APPLICATION_NAME: "Insta REST API"
-  EB_ENVIRONMENT_NAME: "Instarestapi-env"
+  EB_S3_BUCKET_NAME: "django-cicd-bucket-pr2"
+  EB_APPLICATION_NAME: "Insta_REST_API_V1"
+  EB_ENVIRONMENT_NAME: "Instarestapiv1-env"
   DEPLOY_PACKAGE_NAME: "django-app-${{ github.sha }}.zip"
   AWS_REGION_NAME: "eu-central-1"
 
 on:
   push:
     branches:
-      - swagger_implementation
+      - django_aws
 jobs:
   build:
     runs-on: ubuntu-latest
