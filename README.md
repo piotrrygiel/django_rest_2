@@ -10,26 +10,26 @@ Project uses default Django database at the moment (SQLite).
 
 ## API
 ### /photos
-‌- GET : Get all photos
+- GET : Get all photos
 - POST : Create new photo
 ### /photos/:photo_id
-‌- GET : Get photo with given photo_id
+- GET : Get photo with given photo_id
 - PUT : Update photo with given photo_id
 - DELETE : Delete photo with given photo_id
 ### /photos/:photo_id/comments
-‌- GET : Get comments under photo with given photo_id
+- GET : Get comments under photo with given photo_id
 - POST : Create new comment under photo with given photo_id
 ### /photos/:photo_id/likes
-‌* GET : Get likes under photo with given photo_id
-‌* POST : Create like under photo with given photo_id
+- GET : Get likes under photo with given photo_id
+- POST : Create like under photo with given photo_id
 ### /comments/:comment_id
-‌- GET : Get comment with given comment_id
+- GET : Get comment with given comment_id
 - PUT : Update comment with given comment_id
 - DELETE : Delete comment with given comment_id
 ### /likes/:like_id
-‌- DELETE : Delete like with given like_id
+- DELETE : Delete like with given like_id
 ### /users/:following_id/followers
-‌- GET : Get all followers of user with given following_id
+- GET : Get all followers of user with given following_id
 - POST : Follow user with given following_id
 ### /follows/:follow_id
 - DELETE : Delete follow with given follow_id
