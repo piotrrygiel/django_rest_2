@@ -4,7 +4,7 @@ A RESTful API for simple Instagram-like application.
 
 API was created using Python language, Django and Django REST Framework. API Documentation is made with Swagger.
 
-Authenticated user can perform actions such as adding post, adding comment, following other user, view posts, likes, comments etc. All that by connecting with different endpoints.
+Authenticated user can perform CRUD operations by connecting with different endpoints (details below).
 
 Project uses default Django database at the moment (SQLite).
 
